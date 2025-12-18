@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dhanush G - Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Icons & AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- JARVIS CIRCULAR LOADER -->
+<div id="jarvis-screen">
+  <div class="jarvis-circle">
+    <svg width="160" height="160">
+      <circle class="bg"
+        cx="80" cy="80" r="70" />
+      <circle class="progress"
+        cx="80" cy="80" r="70" />
+    </svg>
+    <div id="jarvis-percent">0%</div>
+    <!-- TYPING TEXT -->
+    <div id="jarvis-typing"></div>
+  </div>
+</div>
+
+
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">Dhanush</div>
+
+    <nav class="nav-wrap">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="visit-btn">Visit Github</button>
+    <i id="menu-icon" class="fa-solid fa-bars" aria-hidden="true"></i>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <!-- background video (visible only inside #about) -->
+    <video id="bg-video" autoplay muted loop playsinline>
+      <source src="assets/video/background2.mp4" type="video/mp4">
+    </video>
+
+    <div class="about-container" data-aos="fade-up">
+      <!-- LEFT COLUMN -->
+      <div class="left-box" data-aos="fade-right">
+        <h3 class="intro">Hello, It’s Me</h3>
+        <h1 class="name">Dhanush</h1>
+        <div class="title">Full Stack Developer</div>
+
+        <div class="btn-group">
+          <a href="assets/Dhanush-Resume.pdf" download>
+            <button class="btn">Download CV</button>
+          </a>
+          <a href="#contact">
+            <button class="btn">Contact</button>
+          </a>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/captain-projects-creator" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="right-box" data-aos="fade-left">
+        <p class="description">
+          I am an enthusiastic and detail-oriented Full Stack Developer with hands-on experience
+          gained through personal and freelance projects. Skilled in building responsive and
+          efficient web applications using Java, Spring Boot, React.js, SQL, HTML, CSS, and
+          JavaScript. I am passionate about continuous learning and eager to contribute to
+          innovative and collaborative software development teams.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <div class="skills-container bd-grid" data-aos="fade-left">
+      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title">Frontend</h2>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-brands fa-html5 skills-icon"></i>
+          <span class="skill-name">HTML5</span>
+        </div>
+        <div><span class="skill-percentage">85%</span></div>
+        <div class="skill-bar skill-html"></div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-brands fa-css3-alt skills-icon"></i>
+          <span class="skill-name">CSS3</span>
+        </div>
+        <div><span class="skill-percentage">80%</span></div>
+        <div class="skill-bar skill-css"></div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-brands fa-js skills-icon"></i>
+          <span class="skill-name">JAVASCRIPT</span>
+        </div>
+        <div><span class="skill-percentage">70%</span></div>
+        <div class="skill-bar skill-js"></div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-brands fa-react skills-icon"></i>
+          <span class="skill-name">REACT JS</span>
+        </div>
+        <div><span class="skill-percentage">70%</span></div>
+        <div class="skill-bar skill-react"></div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-brands fa-bootstrap skills-icon"></i>
+          <span class="skill-name">BOOTSTRAP5</span>
+        </div>
+        <div><span class="skill-percentage">70%</span></div>
+        <div class="skill-bar skill-bootstrap"></div>
+      </div>
+
+      <h2 class="section-title">Backend</h2>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-brands fa-java skills-icon"></i>
+          <span class="skill-name">JAVA</span>
+        </div>
+        <div><span class="skill-percentage">85%</span></div>
+        <div class="skill-bar skill-bootstrap"></div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-solid fa-database skills-icon"></i>
+          <span class="skill-name">MySQL-Database</span>
+        </div>
+        <div><span class="skill-percentage">85%</span></div>
+        <div class="skill-bar skill-bootstrap"></div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fas fa-seedling skills-icon"></i>
+          <span class="skill-name">SPRING-BOOT</span>
+        </div>
+        <div><span class="skill-percentage">85%</span></div>
+        <div class="skill-bar skill-bootstrap"></div>
+      </div>
+
+      <h2 class="section-title">Tools</h2>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-brands fa-git-alt skills-icon"></i>
+          <span class="skill-name">GIT - GITHUB</span>
+        </div>
+        <div><span class="skill-percentage">80%</span></div>
+        <div class="skill-bar skill-figma"></div>
+      </div>
+
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="fa-brands fa-docker skills-icon"></i>
+          <span class="skill-name">DOCKER</span>
+        </div>
+        <div><span class="skill-percentage">60%</span></div>
+        <div class="skill-bar skill-figma"></div>
+      </div>
+      <div class="skills-data">
+        <div class="skills-name">
+          <i class="cib-postman skills-icon"></i>
+          <span class="skill-name">POSTMAN</span>
+        </div>
+        <div><span class="skill-percentage">85%</span></div>
+        <div class="skill-bar skill-bootstrap"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid" data-aos="fade-right">
+      
+      <div class="project-card">
+        <img src="assets/img/ebslogo.png" style="height: 150px;" alt="Event Booking System" />
+        <h3>Event Booking System</h3>
+        <p>Developed a full-stack application to manage event registrations and bookings using HTML, CSS, JS and Java, Spring Boot.</p>
+        <div class="btn-group">
+          <a href="http://bookmyevent.site/" class="btn">Live Demo</a>
+          <a href="https://github.com/captain-projects-creator/bookmyevent-backend.git" class="btn">Github Repo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/img/trackmate.png" style="height: 150px;" alt="Daily Attendance System" />
+        <h3>Attendance System</h3>
+        <p>Created a web-based system for tracking attendance using Java, Spring Boot, and HTML, CSS, JS with SQL integration.</p>
+        <div class="btn-group">
+          <a href="http://trackmate.live/" class="btn">Live Demo</a>
+          <a href="https://github.com/captain-projects-creator/attendance-system.git" class="btn">Github Repo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/img/pp.png" style="height: 150px;" alt="Personal Portfolio" />
+        <h3>Personal Portfolio</h3>
+        <p>Designed and deployed a responsive portfolio site using HTML, CSS, and JavaScript to showcase projects.</p>
+        <div class="btn-group">
+          <a href="https://candydeva.github.io/To-Do-List/" class="btn">Live Demo</a>
+          <a href="https://github.com/candydeva/To-Do-List" class="btn">Github Repo</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="input-box" data-aos="flip-up">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="input">
+        <input type="text" placeholder="example@gmail.com" >
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="btn submit-btn" >Submit</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-aos="fade-up">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2025 Dhanush — All Rights Reserved</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    AOS.init({ duration: 1500, once: false });
+  </script>
+
+
+
+<script>
+  document.body.classList.add("loading");
+
+  const percentText = document.getElementById("jarvis-percent");
+  const progressCircle = document.querySelector(".jarvis-circle .progress");
+  const screen = document.getElementById("jarvis-screen");
+  const typingEl = document.getElementById("jarvis-typing");
+
+  const radius = 70;
+  const circumference = 2 * Math.PI * radius;
+
+  progressCircle.style.strokeDasharray = circumference;
+  progressCircle.style.strokeDashoffset = circumference;
+
+  /* ===== TYPING TEXT ===== */
+  const text = "WELCOME, I'M DHANUSH";
+  let charIndex = 0;
+
+  function typeText() {
+    if (charIndex < text.length) {
+      typingEl.textContent += text.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeText, 80);
+    }
+  }
+
+  typeText();
+
+  /* ===== CIRCULAR LOADING ===== */
+  let percent = 0;
+
+  const jarvis = setInterval(() => {
+    percent += 2; // speed control
+    if (percent > 100) percent = 100;
+
+    const offset = circumference - (percent / 100) * circumference;
+    progressCircle.style.strokeDashoffset = offset;
+    percentText.textContent = percent + "%";
+
+    if (percent >= 100) {
+      clearInterval(jarvis);
+
+      setTimeout(() => {
+        screen.classList.add("hide");
+        document.body.classList.remove("loading");
+        AOS.refresh();
+      }, 600);
+    }
+  }, 25);
+</script>
+
+
+</body>
+</html>
