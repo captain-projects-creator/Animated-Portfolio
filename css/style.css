@@ -52,7 +52,7 @@ body::before {
 #jarvis-screen {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, #120101, #000);
+  background: radial-gradient(circle at center, #000000, #000);
   display: flex;
   align-items: center;
   justify-content: center;
