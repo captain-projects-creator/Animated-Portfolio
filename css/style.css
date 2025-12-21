@@ -664,7 +664,7 @@ section#about {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, #264de4,#2965f1);
+  background: linear-gradient(to right, #2965F1,#2965F1);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -751,7 +751,6 @@ section#about {
 }
 
 
-
 #bar-rjs {
   position: relative;
   overflow: hidden;
@@ -771,6 +770,52 @@ section#about {
 #bar-rjs:hover::before {
   transform: scaleX(1);
 }
+
+
+/* Skills - Bootsrap */
+
+
+.skills-data-bs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #573E7D;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-bs:hover {
+  color: #ffffff;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+#bar-bs {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-bs::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #573E7D, #573E7D);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-bs:hover::before {
+  transform: scaleX(1);
+}
+
+
+
 
 
 
