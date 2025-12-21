@@ -389,20 +389,67 @@ section#about {
   font-size: 1.6rem;
   font-weight: 700;
 }
+
+
+
 .left-box .name {
   font-size: 3.8rem;
   line-height: 1;
-  text-shadow: 4px 4px 10px #061056;
   font-weight: 700;
+  color: #ffffff;
+
+  animation: neonRGB 2.5s ease-in-out infinite alternate;
 }
+
+@keyframes neonRGB {
+  0% {
+    text-shadow:
+      0 0 10px #ffffff,
+      0 0 30px #bebebe,
+      0 0 60px #969696;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #8e8e8e,
+      0 0 30px #505050,
+      0 0 60px #ffffff;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #ffffff,
+      0 0 30px #ffffff,
+      0 0 60px #656565;
+  }
+}
+
+
+
 .left-box .title {
   font-size: 2rem;
   font-weight: 600;
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  background-image: linear-gradient(to right, #f8db00 0%, #f98723 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  animation: glowPulse 2.5s ease-in-out infinite;
 }
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 6px rgba(248, 219, 0, 0.6),
+      0 0 12px rgba(249, 135, 35, 0.5);
+  }
+  50% {
+    text-shadow:
+      0 0 12px rgba(248, 219, 0, 0.9),
+      0 0 28px rgba(249, 135, 35, 0.8);
+  }
+}
+
+
+
 
 /* Buttons & socials */
 .btn-group {
