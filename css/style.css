@@ -153,9 +153,10 @@ body.loading {
   inset: 0;
   width: 100%;
   height: 100%;
+  background-image: url("assets/video/bg2.jpg");
   object-fit: cover;
   z-index: 0;
-  opacity: 1.92; /* corrected */
+  opacity: 1.00; /* corrected */
   pointer-events: none;
   transform: translateZ(0);
 }
@@ -203,7 +204,7 @@ body.loading {
 
 /* Logo */
 .logo {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: -1px;
   color: var(--white);
@@ -369,7 +370,7 @@ section#about {
   gap: 48px;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  margin-left: 500px;
 }
 
 /* LEFT column */
@@ -384,11 +385,14 @@ section#about {
 .left-box .intro {
   font-size: 1.6rem;
   font-weight: 700;
+  padding-left: 85px;
 }
 .left-box .name {
-  font-size: 4.8rem;
+  font-size: 3.8rem;
   line-height: 1;
-  font-weight: 800;
+  padding-left: 17px;
+  text-shadow: 4px 4px 10px #061056;
+  font-weight: 700;
 }
 .left-box .title {
   font-size: 2rem;
@@ -404,6 +408,7 @@ section#about {
   display: flex;
   gap: 14px;
   margin-top: 12px;
+  padding-top: 20px;
 }
 
 /* primary .btn (used in header/about) */
@@ -429,11 +434,11 @@ section#about {
 
 /* Project card buttons (isolate style) */
 .project-card .btn {
-  border: 2px solid #000;
+  border: 2px solid #790d0d;
   padding: 0.5rem 1.2rem;
   border-radius: 2rem;
   font-weight: 500;
-  color: #000;
+  color: #790d0d;
   background: transparent;
 }
 .project-card:hover .btn {
@@ -494,6 +499,7 @@ section#about {
 /* ----------------------------- SKILLS / PROJECTS / CONTACT / FOOTER ----------------------------- */
 .section-title {
   font-size: 2.5rem;
+  color: #790d0d;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -513,24 +519,215 @@ section#about {
   padding: 0.5rem 1rem;
   margin-bottom: 1.25rem;
   border-radius: 0.5rem;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 0, 0, 0.02);
 }
 .skills-data:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: url('../hand-cursor.png'), pointer;
   transition: 0.3s ease-in-out;
 }
+
+.skills-data-html {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #ff0000;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-html:hover {
+  color: rgb(255, 255, 255);
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+.skills-data-css {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #0084ff;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-css:hover {
+  color: rgb(255, 255, 255);
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
 .skills-icon { font-size: 3rem; margin-right: 1rem; }
 .skill-bar {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+  background: linear-gradient(to right, #790d0d);
   height: 0.5rem;
   border-radius: 0.5rem;
   z-index: 10;
 }
+
+
+
+#bar-html {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-html::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #ff0000, #f06529);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-html:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+
+#bar-css {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-css::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #264de4,#2965f1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-css:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+/* Skill - JS */
+
+
+.skills-data-js {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #F0DB4F;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-js:hover {
+  color: #F0DB4F;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+#bar-js {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-js::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #323330,#323330);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-js:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+/* Skills - React.js */
+
+
+/* Color Code #61DBF */
+
+
+
+.skills-data-rjs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #00dbff;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-rjs:hover {
+  color: #00DBFF;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+#bar-rjs {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-rjs::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #222222, #222222);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-rjs:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
 
 /* projects grid */
 .projects {
@@ -548,7 +745,7 @@ section#about {
 /* project card */
 .project-card {
   background: #fff;
-  border: 2px solid #000;
+  border: 2px solid #790d0d;
   border-radius: 2rem;
   padding: 2rem;
   max-width: 360px;
@@ -558,10 +755,10 @@ section#about {
   align-items: center;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  color: black;
+  color: #790d0d;
 }
 .project-card:hover {
-  background-color: black;
+  background-color: #790d0d;
   color: white;
   transform: translateY(-10px) scale(1.02);
 }
@@ -573,9 +770,9 @@ section#about {
   transition: 0.3s;
 }
 .project-card:hover img {
-  border-color: rgb(255, 255, 255);
+  border-color: #790d0d;
   color: white;
-  box-shadow: 0px 0px 20px #ffffff;
+  box-shadow: 0px 0px 20px #4a0808;
   transform: scale(1.03);
 }
 
