@@ -153,7 +153,8 @@ body.loading {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url("assets/video/bg2.jpg");
+  
+  background-color: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
   object-fit: cover;
   z-index: 0;
   opacity: 1.00; /* corrected */
@@ -289,19 +290,16 @@ body.loading {
     display: none;
     position: fixed;
     top: 84px; /* just below header */
-    right: 18px;
-    width: calc(100% - 36px);
+    right: 0px;
+    align-items: center;
+    
+    width: 100%;
     max-width: 420px;
     height: calc(100vh - 120px);
-    background: rgba(0,0,0,0.72);
-    backdrop-filter: blur(8px);
-    border-radius: 28px;
-    padding: 28px;
+    background: rgba(0, 0, 0, 0.72);
     flex-direction: column;
     gap: 18px;
     z-index: 3000;
-    box-shadow: 0 14px 40px rgba(0,0,0,0.6);
-    overflow-y: auto;
     transition: transform .32s cubic-bezier(.2,.9,.2,1), opacity .24s ease;
     transform-origin: top right;
     transform: translateY(-10px) scale(.98);
@@ -323,9 +321,9 @@ body.loading {
     display: block;
     width: 100%;
     padding: 12px 14px;
+    padding-left: 50px;
     font-size: 1.05rem;
     color: var(--white);
-    background: transparent;
     border-radius: 10px;
   }
   .nav-links li a:hover {
@@ -336,7 +334,7 @@ body.loading {
   .header { justify-content: space-between; }
 
   /* when mobile menu open, prevent body scroll */
-  body.menu-open { overflow: hidden; }
+  body.menu-open {  overflow: hidden;}
 }
 
 /* ----------------------------- ABOUT SECTION ----------------------------- */
@@ -370,7 +368,6 @@ section#about {
   gap: 48px;
   align-items: center;
   justify-content: space-between;
-  margin-left: 500px;
 }
 
 /* LEFT column */
@@ -385,12 +382,10 @@ section#about {
 .left-box .intro {
   font-size: 1.6rem;
   font-weight: 700;
-  padding-left: 85px;
 }
 .left-box .name {
   font-size: 3.8rem;
   line-height: 1;
-  padding-left: 17px;
   text-shadow: 4px 4px 10px #061056;
   font-weight: 700;
 }
@@ -408,7 +403,6 @@ section#about {
   display: flex;
   gap: 14px;
   margin-top: 12px;
-  padding-top: 20px;
 }
 
 /* primary .btn (used in header/about) */
@@ -901,25 +895,57 @@ footer ul li a { color: #111; font-weight: 600; }
 copyright { font-size: 14px; color: #333; }
 
 /* ----------------------------- RESPONSIVE ----------------------------- */
+
+
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
 @media (max-width: 1100px) {
   .left-box .name { font-size: 4.2rem; }
   .about-container { gap: 30px; padding: 12px; }
 }
+
 @media (max-width: 860px) {
-  .header { padding: 10px 16px; width: 94%; }
+  .header {
+    margin: 0;
+    padding: 5px 16px;
+    width: 90%;
+    box-sizing: border-box;
+  }
   .left-box .name { font-size: 3.4rem; }
   .left-box .title { font-size: 1.6rem; }
 }
+
 @media (max-width: 720px) {
   section#about { padding: 90px 6% 60px; }
-  .about-container { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
-  .left-box, .right-box { flex: 1 1 100%; width: 100%; align-items: center; }
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .left-box,
+  .right-box {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
   .left-box .name { font-size: 2.8rem; }
   .description { text-align: center; }
-  #bg-video { display: none; } /* hide video on mobile for performance */
 }
+
 @media (max-width: 600px) {
-  .nav-links { display: none; }
-  .visit-btn { display: none; }
-  .header { justify-content: flex-start; gap: 14px; }
+  .nav-links {  }
+  .nav-links li a { text-decoration: none; }
+  .visit-btn {  }
+  .header {
+    justify-content: flex-start;
+    gap: 14px;
+  }
 }
