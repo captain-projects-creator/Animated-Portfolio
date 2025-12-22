@@ -32,7 +32,7 @@ a { color: inherit; text-decoration: none; }
 
 body {
   color: var(--black);
-  min-height: 100vh;
+  min-height: 450vh;
   overflow-x: hidden;
   cursor: default;
 }
@@ -546,10 +546,13 @@ section#about {
 /* ----------------------------- SKILLS / PROJECTS / CONTACT / FOOTER ----------------------------- */
 .section-title {
   font-size: 2.5rem;
-  color: #790d0d;
+  color: #000000;
   margin-bottom: 2rem;
   text-align: center;
 }
+
+
+
 
 /* skills area */
 .skills-container {
@@ -588,6 +591,7 @@ section#about {
 }
 .skills-data-html:hover {
   color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 10px #6e6e6e;
   cursor: url('../hand-cursor.png'), pointer;
   transition: 0.3s ease-in-out;
 }
@@ -607,6 +611,7 @@ section#about {
 }
 .skills-data-css:hover {
   color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 10px #6e6e6e;
   cursor: url('../hand-cursor.png'), pointer;
   transition: 0.3s ease-in-out;
 }
@@ -664,6 +669,7 @@ section#about {
   content: "";
   position: absolute;
   inset: 0;
+  box-shadow: 1px 1px 10px #6e6e6e;
   background: linear-gradient(to right, #2965F1,#2965F1);
   transform: scaleX(0);
   transform-origin: left;
@@ -697,6 +703,7 @@ section#about {
 }
 .skills-data-js:hover {
   color: #F0DB4F;
+  box-shadow: 1px 1px 10px #6e6e6e;
   cursor: url('../hand-cursor.png'), pointer;
   transition: 0.3s ease-in-out;
 }
@@ -746,6 +753,7 @@ section#about {
 }
 .skills-data-rjs:hover {
   color: #00DBFF;
+  box-shadow: 1px 1px 10px #6e6e6e;
   cursor: url('../hand-cursor.png'), pointer;
   transition: 0.3s ease-in-out;
 }
@@ -789,6 +797,7 @@ section#about {
 }
 .skills-data-bs:hover {
   color: #ffffff;
+  box-shadow: 1px 1px 10px #6e6e6e;
   cursor: url('../hand-cursor.png'), pointer;
   transition: 0.3s ease-in-out;
 }
@@ -813,6 +822,408 @@ section#about {
 #bar-bs:hover::before {
   transform: scaleX(1);
 }
+
+
+
+
+
+
+
+
+/* Backend */
+
+
+
+
+/* Skill - Java */
+
+
+.skills-data-java {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #f89820;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-java:hover {
+  color: #ffffff;
+  box-shadow: 1px 1px 10px #6e6e6e;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+.skills-data-java #java {
+  color: #f21111;
+}
+
+.skills-data-java:hover #java {
+  color: #ffffff;
+}
+
+
+
+#bar-java {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-java::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #f89820, #f89820);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-java:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+/* Skills - MySQL */
+
+/* Color Code - #00758F - #F29111 */
+
+
+
+.skills-data-sql {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #00758F;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-sql:hover {
+  color: #ffffff;
+  box-shadow: 1px 1px 10px #6e6e6e;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+.skills-data-sql #mysql {
+  color: #F29111;
+}
+
+.skills-data-sql:hover #mysql {
+  color: #ffffff;
+}
+
+
+
+#bar-sql {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-sql::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #00758F, #00758F);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-sql:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+/* Skills - Spring */
+
+/* Color code - #6DB33F */
+
+
+
+.skills-data-spring {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #6DB33F;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-spring:hover {
+  color: #ffffff;
+  box-shadow: 1px 1px 10px #6e6e6e;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+#bar-spring {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-spring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #6DB33F, #6DB33F);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-spring:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+/* Skills - GIT */
+
+/* Color Code - #F1502F #3E2COO - #F29111 */
+
+
+
+.skills-data-git {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #F1502F;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-git:hover {
+  color: #ffffff;
+  box-shadow: 1px 1px 10px #6e6e6e;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+.skills-data-git #git {
+  color: #3e2c00;
+}
+
+.skills-data-git:hover #git {
+  color: #ffffff;
+}
+
+
+
+#bar-git {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-git::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #F1502F, #F1502F);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-git:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+
+/* Skills - GIT */
+
+/* Color Code - #F1502F #3E2COO - #F29111 */
+
+
+
+.skills-data-github {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #000000;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-github:hover {
+  color: #ffffff;
+  box-shadow: 1px 1px 10px #6e6e6e;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+#bar-github {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-github::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #000000, #2f2f2f);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-github:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+
+/* Skills - DOCKER */
+
+/* Color Code - #1D63ED #E5F2FC - #17191E */
+
+
+
+.skills-data-docker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #1D63ED;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-docker:hover {
+  color: #ffffff;
+  box-shadow: 1px 1px 10px #6e6e6e;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+#bar-docker {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-docker::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #0f59ef, #1D63ED);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-docker:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+
+/* Skills - DOCKER */
+
+/* Color Code - #EF5B25 */
+
+
+
+.skills-data-ps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  color: #EF5B25;
+  background: rgba(255, 0, 0, 0.02);
+}
+.skills-data-ps:hover {
+  color: #ffffff;
+  box-shadow: 1px 1px 10px #6e6e6e;
+  cursor: url('../hand-cursor.png'), pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+#bar-ps {
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-ps::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #EF5B25, #EF5B25);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+#bar-ps:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
 
 
 
