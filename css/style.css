@@ -32,12 +32,12 @@ a { color: inherit; text-decoration: none; }
 
 body {
   color: var(--black);
-  min-height: 450vh;
+  min-height: 800vh;
   overflow-x: hidden;
   cursor: default;
 }
 
-html, body {
+html {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -81,7 +81,7 @@ body.loading {
   height: 160px;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  color: #ff0000;
+  color: #f68940;
 }
 
 .jarvis-circle svg {
@@ -101,11 +101,11 @@ body.loading {
 }
 
 .jarvis-circle .progress {
-  stroke: #ff0000;
+  stroke: #ff6600;
   stroke-linecap: round;
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
-  filter: drop-shadow(0 0 10px #ff0000);
+  filter: drop-shadow(0 0 10px #ff6600);
   transition: stroke-dashoffset 0.2s linear;
 }
 
@@ -117,7 +117,7 @@ body.loading {
   justify-content: center;
   font-size: 22px;
   font-weight: 600;
-  text-shadow: 0 0 12px #ff0000;
+  text-shadow: 0 0 12px #ff6600;
 }
 
 /* ===== JARVIS TYPING TEXT ===== */
@@ -131,9 +131,9 @@ body.loading {
   text-align: center;
   font-size: 13px;
   letter-spacing: 1.8px;
-  color: #ff0000;
+  color: #ff6600;
   font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.9);
+  text-shadow: 0 0 8px #ff6600;
   white-space: nowrap;
   overflow: hidden;           /* prevents crossing */
 }
@@ -251,10 +251,14 @@ body.loading {
   width: 0;
   height: 4px;
   border-radius: 6px;
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  background: linear-gradient(45deg, #ad561c 0%, #a83f22 100%);
   transition: width .25s ease;
 }
-.nav-links li a:hover::before { width: 100%; }
+.nav-links li a:hover::before { width: 100%;}
+
+.nav-links li a:hover {
+   color: #f68940; 
+}
 
 /* Hamburger icon (desktop hidden by default) */
 #menu-icon {
@@ -470,12 +474,13 @@ section#about {
   font-weight: 600;
   cursor: pointer;
   transition: all .22s ease;
-  border: 2px solid rgba(255,255,255,0.95);
+  border: 2px solid #ffffff;
 }
 .btn:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: 0px 0px 20px #ffffff;
+  background: #ffae00;
+  border: 2px solid #ffae00;
+  color: #000000;
+  box-shadow: 0px 0px 20px #ffae00;
   transform: translateY(-2px);
 }
 
