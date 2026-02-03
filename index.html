@@ -17,23 +17,6 @@
 <body>
 
 
-<!-- JARVIS CIRCULAR LOADER -->
-<div id="jarvis-screen">
-  <div class="jarvis-circle">
-    <svg width="160" height="160">
-      <circle class="bg"
-        cx="80" cy="80" r="70" />
-      <circle class="progress"
-        cx="80" cy="80" r="70" />
-    </svg>
-    <div id="jarvis-percent">0%</div>
-    <!-- TYPING TEXT -->
-    <div id="jarvis-typing"></div>
-  </div>
-</div>
-
-
-
   <!-- HEADER -->
   <header class="header">
     <div class="logo">PORTFOLIO</div>
@@ -55,7 +38,7 @@
   <section id="about" class="about">
     <!-- background video (visible only inside #about) -->
     <video id="bg-video" autoplay muted loop playsinline>
-      <source src="assets/video/background5.mp4" type="video/mp4">
+      <source src="assets/video/background2.mp4" type="video/mp4">
     </video>
 
     <div class="about-container" data-aos="fade-up">
@@ -90,6 +73,7 @@
           innovative and collaborative software development teams.
         </p>
       </div>
+
     </div>
   </section>
 
@@ -277,62 +261,12 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/script.js"></script>
   <script>
-    AOS.init({ duration: 1500, once: false });
+    
+AOS.init({
+  duration: 1200,
+  once: true
+});
+
   </script>
-
-
-
-<script>
-  document.body.classList.add("loading");
-
-  const percentText = document.getElementById("jarvis-percent");
-  const progressCircle = document.querySelector(".jarvis-circle .progress");
-  const screen = document.getElementById("jarvis-screen");
-  const typingEl = document.getElementById("jarvis-typing");
-
-  const radius = 70;
-  const circumference = 2 * Math.PI * radius;
-
-  progressCircle.style.strokeDasharray = circumference;
-  progressCircle.style.strokeDashoffset = circumference;
-
-  /* ===== TYPING TEXT ===== */
-  const text = "WELCOME, I'M DHANUSH";
-  let charIndex = 0;
-
-  function typeText() {
-    if (charIndex < text.length) {
-      typingEl.textContent += text.charAt(charIndex);
-      charIndex++;
-      setTimeout(typeText, 80);
-    }
-  }
-
-  typeText();
-
-  /* ===== CIRCULAR LOADING ===== */
-  let percent = 0;
-
-  const jarvis = setInterval(() => {
-    percent += 2; // speed control
-    if (percent > 100) percent = 100;
-
-    const offset = circumference - (percent / 100) * circumference;
-    progressCircle.style.strokeDashoffset = offset;
-    percentText.textContent = percent + "%";
-
-    if (percent >= 100) {
-      clearInterval(jarvis);
-
-      setTimeout(() => {
-        screen.classList.add("hide");
-        document.body.classList.remove("loading");
-        AOS.refresh();
-      }, 600);
-    }
-  }, 15);
-</script>
-
-
 </body>
 </html>
