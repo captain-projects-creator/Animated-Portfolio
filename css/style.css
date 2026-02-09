@@ -35,7 +35,7 @@ a {
 
 body {
   color: var(--black);
-  min-height: 500vh;
+  min-height: 800vh;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   overflow-x: hidden;
   cursor: default;
@@ -1327,7 +1327,6 @@ copyright {
 }
 
 /* ----------------------------- RESPONSIVE ----------------------------- */
-
 @media (max-width: 1100px) {
   .left-box .name {
     font-size: 4.2rem;
@@ -1356,6 +1355,9 @@ copyright {
 @media (max-width: 720px) {
   section#about {
     padding: 90px 6% 60px;
+  }
+  .body {
+    min-height: 500vh;
   }
   .about-container {
     flex-direction: column;
@@ -1402,17 +1404,14 @@ copyright {
     gap: 20px;
     text-align: center;
   }
-
   footer ul {
     flex-wrap: wrap; /* allow wrapping */
     justify-content: center; /* center links */
     gap: 16px;
   }
-
   footer ul li a {
     font-size: 0.95rem;
   }
-
   footer .copyright {
     font-size: 0.85rem;
     line-height: 1.4;
