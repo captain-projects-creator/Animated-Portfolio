@@ -47,14 +47,14 @@ submit.addEventListener("click", function () {
     .then(function () {
       emailInput.value = "";
 
-      const popup = document.getElementById("successPopup");
-      popup.classList.add("active");
+      const popup = document.getElementById("successToast");
+      popup.classList.add("show");
 
       setTimeout(() => {
-        popup.classList.remove("active");
+        popup.classList.remove("show");
       }, 2000);
 
-      submit.disabled = false; // 🔥 FIX
+      submit.disabled = false;
     })
     .catch(function (error) {
       console.error("Error:", error);

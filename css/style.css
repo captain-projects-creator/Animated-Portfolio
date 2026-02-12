@@ -1420,6 +1420,7 @@ copyright {
 }
 
 /* Toast Container */
+/* Toast Box */
 .toast {
   position: fixed;
   top: 30px;
@@ -1433,30 +1434,55 @@ copyright {
   opacity: 0;
   transition: all 0.4s ease;
   z-index: 9999;
+  overflow: hidden;
 }
 
-/* Active State (Toggle) */
+/* Show state */
 .toast.show {
   transform: translateX(0);
   opacity: 1;
 }
 
-/* Toast Content */
+/* Content */
 .toast-content {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Check Icon */
 .toast-check {
   font-size: 20px;
   color: #4caf50;
   font-weight: bold;
 }
 
-/* Text */
 .toast-message {
   font-size: 14px;
   font-weight: 500;
+}
+
+/* 🔥 Progress Bar */
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #4caf50;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animate Progress */
+.toast.show .toast-progress {
+  animation: progressBar 2s linear forwards;
+}
+
+@keyframes progressBar {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
 }
