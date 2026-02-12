@@ -239,10 +239,10 @@
     <div class="input-box" data-aos="flip-up">
       <h2 class="section-title">Contact Me</h2>
       <div class="input">
-        <input type="text" placeholder="example@gmail.com" >
+        <input type="email" id="email" placeholder="example@gmail.com" >
         <i class="fa-solid fa-envelope"></i>
       </div>
-      <div class="btn submit-btn" >Submit</div>
+      <Button class="btn submit-btn" id="submitBtn" >Submit</Button>
     </div>
   </section>
 
@@ -258,15 +258,19 @@
   </footer>
 
   <!-- SCRIPTS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/script.js"></script>
-  <script>
-    
-AOS.init({
-  duration: 1200,
-  once: true
-});
+   <!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
+<script src="js/script.js"></script>
+
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+   AOS.init({
+    duration: 1200,
+    once: true
+  });
   </script>
 </body>
 </html>

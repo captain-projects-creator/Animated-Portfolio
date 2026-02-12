@@ -4,6 +4,45 @@
 // - Mobile: hamburger toggles overlay (.nav-links.active)
 // - Closes when clicking a link, outside, Esc, or on resize to desktop
 
+const firebaseConfig = {
+  apiKey: "AIzaSyDFsORcsHFNAT6GTjwCnuskEOM68M0BvZI",
+  authDomain: "my-portfolio-80020.firebaseapp.com",
+  projectId: "my-portfolio-80020",
+  storageBucket: "my-portfolio-80020.firebasestorage.app",
+  messagingSenderId: "206033517415",
+  appId: "1:206033517415:web:437702007d149dc0210dc2",
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+// Initialize Firestore
+const db = firebase.firestore();
+
+const submit = document.getElementById("submitBtn");
+const emailInput = document.getElementById("email");
+
+// Click Event
+submit.addEventListener("click", function () {
+  const email = emailInput.value.trim();
+
+  if (email === "") {
+    alert("Please Enter Email");
+    return;
+  }
+
+  db.collection("contacts")
+    .add({
+      email: email,
+      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    })
+    .then(function () {
+      alert("Submitted Successfully!");
+      emailInput.value = "";
+    })
+    .catch(function (error) {
+      console.error("Error:", error);
+    });
+});
 // Elements (graceful null checks)
 const menuIcon = document.getElementById("menu-icon");
 const navLinks = document.querySelector(".nav-links");
