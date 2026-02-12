@@ -18,16 +18,32 @@ firebase.initializeApp(firebaseConfig);
 // Initialize Firestore
 const db = firebase.firestore();
 
-const submit = document.getElementById("submitBtn");
+const nameInput = document.getElementById("name");
+const mobileInput = document.getElementById("mobile");
 const emailInput = document.getElementById("email");
+const submit = document.getElementById("submitBtn");
 
 submit.addEventListener("click", function () {
   submit.disabled = true;
+  const nameValue = nameInput.value.trim();
+  const mobileVal = mobileInput.value.trim();
   const email = emailInput.value.trim();
+
+  if (nameValue === "") {
+    alert("Please Enter Name");
+    submit.disabled = false;
+    return;
+  }
+
+  if (mobileVal === "") {
+    alert("Please Enter Mobile Number");
+    submit.disabled = false;
+    return;
+  }
 
   if (email === "") {
     alert("Please Enter Email");
-    submit.disabled = false; // 🔥 FIX
+    submit.disabled = false;
     return;
   }
 
@@ -35,16 +51,20 @@ submit.addEventListener("click", function () {
 
   if (!emailPattern.test(email)) {
     alert("Enter valid email address");
-    submit.disabled = false; // 🔥 FIX
+    submit.disabled = false;
     return;
   }
 
   db.collection("contacts")
     .add({
+      name: nameValue,
+      mobile: mobileVal,
       email: email,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
     })
     .then(function () {
+      nameInput.value = "";
+      mobileInput.value = "";
       emailInput.value = "";
 
       const popup = document.getElementById("successToast");
@@ -58,7 +78,7 @@ submit.addEventListener("click", function () {
     })
     .catch(function (error) {
       console.error("Error:", error);
-      submit.disabled = false; // 🔥 FIX
+      submit.disabled = false;
     });
 });
 

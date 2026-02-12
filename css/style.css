@@ -327,14 +327,14 @@ section#about {
     position: absolute;
     inset: 0;
 
-    /* 🔥 visible on dark bg */
+    /* visible on dark bg */
     background: rgba(255, 255, 255, 0.12);
 
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 
-    z-index: 0; /* 🔥 FIX */
+    z-index: 0; /* FIX */
   }
 
   .nav-links li a:hover::before {
@@ -1196,52 +1196,46 @@ section#about {
   line-height: 1.5;
 }
 
-.input {
+/* Input Wrapper */
+.input-group {
   position: relative;
   width: 100%;
-  max-width: 520px;
-  display: inline-block;
+  max-width: 720px;
+  margin-bottom: 20px;
 }
-.input i {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.25rem;
-  color: #6b6b6b;
-  pointer-events: none;
-  transition: color 0.18s ease;
-  z-index: 2;
-}
-.input input {
+
+/* Input Field */
+.input-group input {
   width: 100%;
-  padding: 0.9rem 1rem 0.9rem 3.5rem;
-  border-radius: 2rem;
+  padding: 1.2rem 1.2rem 1.2rem 3.5rem; /* space for icon */
+  border-radius: 3rem;
   border: 2px solid #000;
-  font-size: 1rem;
-  line-height: 1.2;
+  font-size: 1.1rem;
   outline: none;
   background: transparent;
-  transition:
-    border-color 0.18s ease,
-    box-shadow 0.18s ease,
-    background 0.18s ease;
-  color: inherit;
-  -webkit-appearance: none;
+  transition: 0.3s ease;
 }
-.input input:focus {
-  border-color: var(--accent1);
-  box-shadow: 0 8px 24px rgba(0, 157, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
+
+/* Icon Inside Input */
+.input-group i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #6b6b6b;
+  pointer-events: none;
+  transition: 0.3s ease;
 }
-.input input::placeholder {
-  font-size: 0.95rem;
-  color: #9a9a9a;
+
+/* Focus Effect */
+.input-group input:focus {
+  border-color: #4caf50;
 }
-.input input:focus ~ i,
-.input input:focus + i,
-.input:focus-within i {
-  color: var(--accent1);
+
+.input-group input:focus + i,
+.input-group:focus-within i {
+  color: #4caf50;
 }
 
 /* input-box larger variant */
@@ -1461,7 +1455,7 @@ copyright {
   font-weight: 500;
 }
 
-/* 🔥 Progress Bar */
+/* Progress Bar */
 .toast-progress {
   position: absolute;
   bottom: 0;
