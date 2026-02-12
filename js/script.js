@@ -21,12 +21,21 @@ const db = firebase.firestore();
 const submit = document.getElementById("submitBtn");
 const emailInput = document.getElementById("email");
 
-// Click Event
 submit.addEventListener("click", function () {
+  submit.disabled = true;
   const email = emailInput.value.trim();
 
   if (email === "") {
     alert("Please Enter Email");
+    submit.disabled = false; // 🔥 FIX
+    return;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
+    alert("Enter valid email address");
+    submit.disabled = false; // 🔥 FIX
     return;
   }
 
@@ -36,13 +45,23 @@ submit.addEventListener("click", function () {
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
     })
     .then(function () {
-      alert("Submitted Successfully!");
       emailInput.value = "";
+
+      const popup = document.getElementById("successPopup");
+      popup.classList.add("active");
+
+      setTimeout(() => {
+        popup.classList.remove("active");
+      }, 2000);
+
+      submit.disabled = false; // 🔥 FIX
     })
     .catch(function (error) {
       console.error("Error:", error);
+      submit.disabled = false; // 🔥 FIX
     });
 });
+
 // Elements (graceful null checks)
 const menuIcon = document.getElementById("menu-icon");
 const navLinks = document.querySelector(".nav-links");

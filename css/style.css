@@ -1418,3 +1418,45 @@ copyright {
     text-align: center;
   }
 }
+
+/* Toast Container */
+.toast {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: #1e1e1e;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateX(150%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+/* Active State (Toggle) */
+.toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Toast Content */
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Check Icon */
+.toast-check {
+  font-size: 20px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Text */
+.toast-message {
+  font-size: 14px;
+  font-weight: 500;
+}
