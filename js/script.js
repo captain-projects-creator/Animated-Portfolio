@@ -4,6 +4,8 @@
 // - Mobile: hamburger toggles overlay (.nav-links.active)
 // - Closes when clicking a link, outside, Esc, or on resize to desktop
 
+emailjs.init("dMeshRwCh0mWVh8dj");
+
 const firebaseConfig = {
   apiKey: "AIzaSyDFsORcsHFNAT6GTjwCnuskEOM68M0BvZI",
   authDomain: "my-portfolio-80020.firebaseapp.com",
@@ -63,6 +65,20 @@ submit.addEventListener("click", function () {
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
     })
     .then(function () {
+      // 🔥 Send Email Notification
+      emailjs
+        .send("service_94fb7ho", "template_2n1x3ws", {
+          name: nameValue,
+          mobile: mobileVal,
+          email: email,
+        })
+        .then(function () {
+          console.log("Email sent successfully");
+        })
+        .catch(function (error) {
+          console.error("Email error:", error);
+        });
+
       nameInput.value = "";
       mobileInput.value = "";
       emailInput.value = "";
